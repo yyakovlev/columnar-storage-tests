@@ -1,2 +1,4 @@
-package com.example.carbondatapoc;public class StatisticsCollector {
+package com.example.carbondatapoc;
+
+public class StatisticsCollector {
 }
