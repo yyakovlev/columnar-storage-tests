@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: carbondatatests-k8s
+spec:
+  selector:
+    matchLabels:
+      app: carbondatatests
+  replicas: 2
+  template:
+    metadata:
+      labels:
+        app: carbondatatests
+    spec:
+      containers:
+        - name: carbondatatests
+          image: yyakovlev1/carbondatatests:0.0.1
+          imagePullPolicy: IfNotPresent
+          ports:
+            - containerPort: 8082
